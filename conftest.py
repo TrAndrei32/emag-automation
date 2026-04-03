@@ -13,6 +13,14 @@ def page():
         page = context.new_page()
         page.set_default_timeout(DEFAULT_TIMEOUT)
         page.goto(BASE_URL)
+
+        try:
+            cookie_button = page.locator("#onetrust-accept-btn-handler")
+            cookie_button.wait_for(state="visible", timeout=5000)
+            cookie_button.click()
+        except:
+            pass
+
         yield page
         context.close()
         browser.close()
