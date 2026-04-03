@@ -76,7 +76,7 @@ After running tests, open `reports/report.html` in your browser.
 
 ## CI/CD
 
-This project includes a GitHub Actions workflow (`.github/workflows/tests.yml`) configured to run automatically on every push to `main`.
+This project includes a GitHub Actions workflow (`.github/workflows/tests.yml`) that can be triggered manually from the Actions tab.
 
 > **Note:** eMAG.ro implements bot protection (CAPTCHA) that blocks headless browsers in cloud environments. 
 > Tests are designed to run locally where the full browser is visible.
