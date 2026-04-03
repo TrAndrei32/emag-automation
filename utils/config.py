@@ -1,3 +1,5 @@
+import os
+
 # Configurare generala
 
 BASE_URL = "https://www.emag.ro"
@@ -6,5 +8,6 @@ BASE_URL = "https://www.emag.ro"
 DEFAULT_TIMEOUT = 10000
 
 # Browser settings
-HEADLESS = False
-SLOW_MO = 50
+# Pe CI/CD (GitHub Actions) headless automat
+HEADLESS = os.environ.get("CI", "false").lower() == "true"
+SLOW_MO = 0 if HEADLESS else 50
