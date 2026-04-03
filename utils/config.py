@@ -5,7 +5,7 @@ import os
 BASE_URL = "https://www.emag.ro"
 
 # Timeout 10 sec
-DEFAULT_TIMEOUT = 10000
+DEFAULT_TIMEOUT = 30000
 
 # Browser settings
 # Pe CI/CD (GitHub Actions) headless automat
