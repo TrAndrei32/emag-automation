@@ -72,3 +72,11 @@ After running tests, open `reports/report.html` in your browser.
 - **Stable Selectors** — using CSS selectors and `data-test` attributes
 - **Centralized Config** — base URL, timeout and headless mode in one place
 - **Real Website Testing** — automation on a live e-commerce platform
+
+
+## CI/CD
+
+This project includes a GitHub Actions workflow (`.github/workflows/tests.yml`) configured to run automatically on every push to `main`.
+
+> **Note:** eMAG.ro implements bot protection (CAPTCHA) that blocks headless browsers in cloud environments. 
+> Tests are designed to run locally where the full browser is visible.
